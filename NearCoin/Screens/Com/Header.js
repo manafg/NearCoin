@@ -28,7 +28,7 @@ export default class HeaderC extends Component {
             <Body>
                 <Title>{this.props.title}</Title>
             </Body>
-            <Right />
+           <Right/>
         </Header>
         )
     }

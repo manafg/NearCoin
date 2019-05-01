@@ -60,21 +60,8 @@ class FooterS extends Component {
     render() {
         return (
             <Container style={styles.container}>
-                <Header>
-                    <Left>
-                        <Button transparent onPress={() => this.props.navigation.goBack()}>
-                            <Icon name="arrow-back" />
-                        </Button>
-                    </Left>
-                    <Body>
-                        <Title>Footer</Title>
-                    </Body>
-                    <Right />
-                </Header>
-
-                <Content padder />
-
-                <Footer>
+                <Content padder style={{marginTop: -100}} />
+                <Footer >
                     <FooterTab>
                         <Button vertical active={this.state.tab1} onPress={() => this.toggleTab1()}>
                             <Icon active={this.state.tab1} name="apps" />

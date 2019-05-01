@@ -18,7 +18,9 @@ import HeaderC from './Com/Header'
 import { MapView } from 'expo';
 import { StyleSheet, View, Image, Dimensions } from "react-native";
 import StarRating from 'react-native-star-rating';
-
+import StartEscrow from './Com/startEscrow';
+import CCC from './Com/CCC';
+ 
 const deviceWidth = Dimensions.get("window").width;
 
 class BuyingReq extends Component {
@@ -43,46 +45,8 @@ class BuyingReq extends Component {
             <Container style={styles.container}>
 
                 <Content padder>
-                    <Card style={styles.mb}>
-                        <CardItem bordered style={{ borderTopLeftRadius: 8, borderTopRightRadius: 8 }}>
-                            <Left>
-                                <Thumbnail source={require("../assets/randomPerson.png")} />
-                                <Body>
-                                    <Text>Raymond Tyler </Text>
-                                    <View style={{ width: '20%', justifyContent: 'center' }} numberOfLines={1} note>
-                                        <StarRating
-                                            starSize={20}
-                                            disabled={true}
-                                            maxStars={5}
-                                            rating={4}
-                                            fullStarColor={'#FFD700'}
-                                        />
-                                    </View>
-                                </Body>
-                            </Left>
-                        </CardItem>
-
-                        <CardItem>
-                            <Body>
-                                <Text style={{ marginTop: 20, marginLeft: 20 }}>
-                                    Amount
-                </Text>
-                                <Text style={{ marginTop: 0, marginLeft: 20 }}>
-                                    1 BTC = $ 4,000
-                </Text>
-                                <Text style={{ marginTop: 10, marginLeft: 20 }}>
-                                    "I am willing to meet you!"
-                </Text>
-                            </Body>
-                        </CardItem>
-                        <CardItem style={{ borderTopLeftRadius: 8, borderTopRightRadius: 8, paddingVertical: 0, }}>
-                            <Body>
-                                <Button onPress={() => navigate("Map")} block style={{ margin: 10, borderRadius: 50, marginTop: 50, flex: 1, zIndex: 999 }}>
-                                    <Text>Start Escrow</Text>
-                                </Button>
-                            </Body>
-                        </CardItem>
-                    </Card>
+                   <StartEscrow />
+                   <CCC/>
                 </Content>
             </Container>
         )

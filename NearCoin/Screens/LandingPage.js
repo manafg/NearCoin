@@ -151,7 +151,7 @@ class LandingPage extends Component {
                
                     <Image  
                         style={{
-                           resizeMode: "strech",
+                           resizeMode: "stretch",
                            width: '100%',
                            height: 90,
                         }}

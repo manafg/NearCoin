@@ -14,7 +14,9 @@ const MainNavigator = createStackNavigator({
 }},
   Signup: {screen: Signup},
   Signin: {screen: Signin},
-  Map: {screen: Maps},
+  Map: {screen: Maps, nvigationOptions: {
+    header: null,
+}},
   Buy: {screen: Buy },
   BuyingReq: {screen: BuyingReq},
   DealDetalies: {screen: DealDetalies}
