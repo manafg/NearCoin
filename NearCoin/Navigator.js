@@ -5,7 +5,16 @@ import Signup from './Screens/Signup';
 import Maps from './Screens/Map';
 import Buy from './Screens/Buy';
 import DealDetalies from './Screens/DealDetalies';
-import BuyingReq from './Screens/BuyingReq'
+import BuyingReq from './Screens/BuyingReq';
+import myprofile from './Screens/myprofile'
+import Escrow from './Screens/Escrow';
+import CurrentDeales from './Screens/CurrentDeales'
+import StartEscrows from './Screens/StartEscrows';
+import Wallet from './Screens/Wallet';
+import ReqConf from './Screens/ReqConf'
+import Noti from './Screens/Noti'
+import chart from './Screens/Chart' 
+import NewsFeed from './Screens/NewsFeed'
 
 
 const MainNavigator = createStackNavigator({
@@ -14,12 +23,23 @@ const MainNavigator = createStackNavigator({
 }},
   Signup: {screen: Signup},
   Signin: {screen: Signin},
-  Map: {screen: Maps, nvigationOptions: {
+  Map: {screen: Maps, navigationOptions: {
     header: null,
 }},
+  NewsFeed  :{screen:NewsFeed},
+  Wallet:{screen: Wallet},
+  CurrentDeales:{screen:CurrentDeales},
+  StartEscrows:{screen:StartEscrows},
   Buy: {screen: Buy },
+  Noti: {screen: Noti},
+  ReqConf: {screen :ReqConf},
   BuyingReq: {screen: BuyingReq},
-  DealDetalies: {screen: DealDetalies}
+  DealDetalies: {screen: DealDetalies},
+  Escrow: {screen: Escrow},
+  chart : {screen:chart},
+  myprofile: {screen:myprofile, nvigationOptions: {
+    header: null,
+}}
 },
 { initialRouteName: "LandingPage"},
 );

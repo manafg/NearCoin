@@ -10,6 +10,7 @@ import {
     CardItem,
     Text,
     Thumbnail,
+    IconNB,
     Left,
     Right,
     Body
@@ -59,8 +60,8 @@ export default class StartEscrow extends React.Component {
             </CardItem>
             <CardItem style={{ borderTopLeftRadius: 8, borderTopRightRadius: 8, paddingVertical: 0, }}>
                 <Body>
-                    <Button onPress={() => navigate("Map")} block style={{ margin: 10, borderRadius: 50, marginTop: 50, flex: 1, zIndex: 999 }}>
-                        <Text>Start Escrow</Text>
+                    <Button  block style={{ margin: 10, borderRadius: 50, marginTop: 50, flex: 1, zIndex: 999 }}>
+                        <Text>{this.props.type== '3 Sell' ? 'Sellect Seller':'Start Escrow'}</Text>
                     </Button>
                 </Body>
             </CardItem>

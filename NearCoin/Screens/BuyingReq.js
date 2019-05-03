@@ -20,6 +20,7 @@ import { StyleSheet, View, Image, Dimensions } from "react-native";
 import StarRating from 'react-native-star-rating';
 import StartEscrow from './Com/startEscrow';
 import CCC from './Com/CCC';
+import BillAccount from './Com/BillAccount'
  
 const deviceWidth = Dimensions.get("window").width;
 
@@ -47,6 +48,7 @@ class BuyingReq extends Component {
                 <Content padder>
                    <StartEscrow />
                    <CCC/>
+                   <BillAccount/>
                 </Content>
             </Container>
         )

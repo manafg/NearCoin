@@ -20,24 +20,25 @@ import {
 } from "native-base";
 import HeaderC from './Com/Header'
 import { MapView } from 'expo';
-import { View, Picker, StyleSheet } from 'react-native'
+import { View, Picker, StyleSheet } from 'react-native';
 
 
 class Buy extends Component {
 
-  static navigationOptions = ({ navigation }) => {
-    return {
-      title: navigation.state.params.Text,
-    };
-  };
+  // static navigationOptions = ({ navigation }) => {
+  //   return {
+  //     title: navigation.state.params.Text,
+  //   };
+  // };
 
   constructor(props){
     super(props);
   }
   
   render() {
-    const { navigation } = this.props;
-    const itemId = navigation.getParam('Text', 'Buy');
+    const  navigate  = this.props.navigation
+    const itemId = navigate.getParam('Text', 'Buy');
+    const path = navigate.getParam('path', 'CurrentDeales');
     
     return (
       <Container >
@@ -89,7 +90,7 @@ class Buy extends Component {
                         image={require('../assets/icons_8_bitcoin_2.png')}
                     />
                 </MapView>
-          <Button onPress={() => navigate("Map")} block style={{ margin: 15, borderRadius: 50, marginTop: 50, flex: 1, zIndex: 999 }}>
+          <Button onPress={() => navigate.navigate('CurrentDeales')} block style={{ backgroundColor: itemId === 'Buy' ? "#4380ff" : '#fa4169', margin: 15, borderRadius: 50, marginTop: 50, flex: 1, zIndex: 999 }}>
             <Text>{itemId}</Text>
           </Button>
         </Content>

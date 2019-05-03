@@ -64,11 +64,6 @@ export default class CCC extends React.Component {
                 <Text style={{left: 160,fontSize:12, color:'grey', bottom: 185}}> BTC </Text>
                 <Text style={{left: 200,fontSize:12, color:'grey', bottom: 200}}> $4,000 </Text>
                 <Text style={{left: 270,fontSize:12, color:'grey', bottom: 215}}> 1% </Text>
-                
-                
-                
-
-
             </View>
         )
     }
